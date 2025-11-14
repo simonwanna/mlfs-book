@@ -1,42 +1,24 @@
-What should we write here...? \
+Jacob Schweizer and Simon Wanna
+
+## What we have done
+...
 
 
-## ML System Examples
+### Grade ‘E’ tasks
+- [x] 1. Write a backfill feature pipeline that downloads historical weather data (ideally >1 year of data), loads a csv file with
+historical air quality data (downloaded from https://aqicn.org) and registers them as 2 Feature Groups with Hopsworks.
+- [x] 2. Schedule a daily feature pipeline notebook that downloads yesterday’s weather data and air quality data, and also the
+weather prediction for the next 7-10 days and update the Feature Groups in Hopsworks. Use GH Actions or Modal.
+- [x] 3. Write a training pipeline that (1) selects the features for use in a feature view, (2) reads training data with the Feature
+View, trains a regression or classifier model to predict air quality (pm25). Register the model with Hopsworks.
+- [x] 4. Write a batch inference pipeline that creates a dashboard. The program should download your model from Hopsworks
+and plot a dashboard that predicts the air quality for the next 7-10 days for your chosen air quality sensor.
+- [x] 5. Monitor the accuracy of your predictions by plotting a hindcast graph showing your predictions vs outcomes
+(measured air quality).
 
+### Grade ‘C’ tasks
+- [] 6. Update your Model by adding a new feature, lagged air quality for the previous 1 day, 2 days, and 3 days. Measure and
+explain the performance improvement or regression for these features.
 
-[Dashboards for Example ML Systems](https://featurestorebook.github.io/mlfs-book/)
-
-
-# Run Air Quality Tutorial
-
-See [tutorial instructions here](https://docs.google.com/document/d/1YXfM1_rpo1-jM-lYyb1HpbV9EJPN6i1u6h2rhdPduNE/edit?usp=sharing)
-    
-# Create a conda or virtual environment for your project before you install the requirements
-    pip install -r requirements.txt
-
-
-##  Run pipelines with make commands
-
-    make aq-backfill
-    make aq-features
-    make aq-train
-    make aq-inference
-    make aq-clean
-
-or 
-    make aq-all
-
-
-
-## Feldera
-
-
-mkdir -p /tmp/c.app.hopsworks.ai
-ln -s  /tmp/c.app.hopsworks.ai ~/hopsworks
-docker run -p 8080:8080 \
-  -v ~/hopsworks:/tmp/c.app.hopsworks.ai \
-  --tty --rm -it ghcr.io/feldera/pipeline-manager:latest
-
-
-## Introduction to ML
-I wrote a brief introduction to machine learning [here](./introduction_to_supervised_ml.pdf)
+### Grade ‘A’ tasks
+- [] 7. Provide predictions for all air quality sensors in a Swedish city. Select a city by entering your group number here.
