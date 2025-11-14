@@ -12,15 +12,18 @@ and plot a dashboard that predicts the air quality for the next 7-10 days for yo
 - [x] 5. Monitor the accuracy of your predictions by plotting a hindcast graph showing your predictions vs outcomes
 (measured air quality).
 
----
+### Comments
 We downloaded air quality data from the sensor at Linköping Hamngatan-10. After adding the keys/secrets we ran the backfill and training pipelines to create the feature groups, feature views and trained model stored in Hopsworks. Running the workflow published the github pages with predictions and model performance monitoring.
 
+**Note**: need to set status_options: '--untracked-files=all' in workflow to include the generated dashboard files in the commit to update model monitor image.
+
+---
 
 ### Grade ‘C’ tasks
 - [x] 6. Update your Model by adding a new feature, lagged air quality for the previous 1 day, 2 days, and 3 days. Measure and
 explain the performance improvement or regression for these features.
 
----
+### Comments
 We update the third notebook with a block that extend the feature with a lagged version of PM 2.5.
 
 Comparison of performance before and after adding lagged features:
