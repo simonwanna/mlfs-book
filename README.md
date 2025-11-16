@@ -15,8 +15,6 @@ and plot a dashboard that predicts the air quality for the next 7-10 days for yo
 ### Comments
 We downloaded air quality data from the sensor at Linköping Hamngatan-10. After adding the keys/secrets we ran the backfill and training pipelines to create the feature groups, feature views and trained model stored in Hopsworks. Running the workflow published the github pages with predictions and model performance monitoring.
 
-**Note**: need to set status_options: '--untracked-files=all' in workflow to include the generated dashboard files in the commit to update model monitor image.
-
 ---
 
 ### Grade ‘C’ tasks
@@ -39,4 +37,4 @@ After:
 ---
 
 ### Grade ‘A’ tasks
-- [] 7. Provide predictions for all air quality sensors in a Swedish city. Select a city by entering your group number here.
+- [ ] 7. Provide predictions for all air quality sensors in a Swedish city. Select a city by entering your group number here.
